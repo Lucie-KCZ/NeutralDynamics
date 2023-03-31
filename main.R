@@ -178,8 +178,6 @@ sr.over.time <- function(samp, out = 'trend'){
   sr <- log(apply(ifelse(samp$com.matrix > 0, 1, 0), 1, sum, na.rm = T) + 1)
   
   if(out == 'trend') {
-    # output <- data.frame(t(summary(lm(sr ~ years))$coefficients[2, c(1, 4)]), TS_L = nrow(samp$com.matrix))
-    # output <- data.frame(t(summary(lm(sr ~ years))$coefficients[2, c(1, 4)]), TS_L = samp$infos$TS_LENGTH)
     output <- data.frame(t(summary(lm(log(sr+1) ~ years))$coefficients[2, c(1, 4)]), TS_L = samp$infos$TS_LENGTH)
   } else {
     output <- data.frame(STUDY_ID = samp$infos$STUDY_ID,
@@ -259,7 +257,7 @@ for(i in 1:length(sr.trends)){
 t.test(sr.trends$observed$Estimate, sr.trends$null$Estimate)
 t.test(sr.trends$observed$Estimate, sr.trends$simulated$Estimate)
 
-# NICE -------------------------------------------------------------------
+# NICE ---------------------------------------------------------------------
 source('~/Dropbox/Neutral trends/analysis/sExtinct/R/OLE.R')
 source('~/Dropbox/Neutral trends//analysis/sExtinct/R/OLE.fun.R')
 
@@ -390,3 +388,4 @@ t.test(NICE$observed$NICE, mu = 0)
 t.test(NICE$observed$NICE, NICE$null$NICE)
 t.test(NICE$observed$NICE, NICE$simulated$NICE)
 
+ 
