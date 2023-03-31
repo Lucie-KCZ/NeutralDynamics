@@ -259,7 +259,7 @@ for(i in 1:length(sr.trends)){
 t.test(sr.trends$observed$Estimate, sr.trends$null$Estimate)
 t.test(sr.trends$observed$Estimate, sr.trends$simulated$Estimate)
 
-# LRR ---------------------------------------------------------------------
+# NICE -------------------------------------------------------------------
 source('~/Dropbox/Neutral trends/analysis/sExtinct/R/OLE.R')
 source('~/Dropbox/Neutral trends//analysis/sExtinct/R/OLE.fun.R')
 
