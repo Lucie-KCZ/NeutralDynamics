@@ -13,7 +13,7 @@ The `main.R` script is composed of three main parts:
 ### Data import
 The data are formatted as a list for which is element is a list containing the community matrix and information about the community (e.g., sampling methods, total species richness, ...). Mostly, data were processed beforehand and so most of the selection criteria, especially for BBS, don't appear here. However, the main aspect is that one can see how to simulate data (both from the null model and from the neutral model) from the observed ones.
 
-L97: `list.files('~/Dropbox/Neutral trends/analysis/functions island package/R/', full.names = T)` is a manual import of the package `island` which can be find here: [CRAN page for the island pkg](https://cran.r-project.org/web/packages/island/index.html).
+L97: `list.files('~/Dropbox/Neutral trends/analysis/functions island package/R/', full.names = T)` is a manual import of the package `island` which can be found here: [CRAN page for the island pkg](https://cran.r-project.org/web/packages/island/index.html).
 
 ### NICE
 L261 & 262: `source('~/Dropbox/Neutral trends/analysis/sExtinct/R/OLE.R')` and `source('~/Dropbox/Neutral trends//analysis/sExtinct/R/OLE.fun.R')` are used to manually import the `OLE` functions from the `sExtinct` package which can be found here: [Vignette of the sExtinct pkg](https://rdrr.io/cran/sExtinct/).
